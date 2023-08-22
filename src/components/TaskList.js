@@ -1,11 +1,16 @@
 import React from "react";
+import { TASKS } from "../data";
 
-function TaskList() {
+
+function TaskList({ tasks }) {
   return (
     <div className="tasks">
-      {/* display a list of tasks using Task component */}
+      {tasks.map((task, index) => (
+        <TASKS key={index} task={task} />
+      ))}
     </div>
   );
 }
+
 
 export default TaskList;
